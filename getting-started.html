@@ -1,0 +1,116 @@
+---
+layout: default
+title: Getting Started &middot; The Mjolnir Library
+slug: philosophy
+urlbase: "../"
+---
+
+<div class="jumbotron">
+	<div class="container">
+		<h1>Getting Started</h1>
+		<p>Basic directions and overview of how to get the library and start an application.</p>
+	</div>
+</div>
+
+<div class="content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 content-block">
+
+				<p id="foreword">The library has been designed to manage large projects. We provide some compatibility with services that only offer ftp access, but in general the minimum, as far as basic web apps go, stands at a basic server with <a href="http://php.net/">php</a> where you have ssh and <a href="http://git-scm.com/">git</a> access along with a place outside on the server's public section where you can securily place the system and private files.</p>
+
+				<p><em>We do not support or recommend placing system files in the servers public section.</em></p>
+
+			</div>
+			<div class="col-md-9 content-block">
+
+				<h3 id="requirements">Requirements</h3>
+
+				<ul>
+					<li><a href="http://php.net/">PHP version 5.4.10</a> or higher</li>
+					<li><a href="http://git-scm.com/">git</a>, the distributed version control system</li>
+					<li>basic console access</li>
+				</ul>
+
+				<p><em>Additional PHP extentions are specified by system tools. We avoid mentioning them here since they are dependent on the modules and features you have loaded/enabled. Information on required settings are also available though system tools provided with the distribution.</em></p>
+
+				<h4>Web Applications</h4>
+
+				<p>In addition to the above requirements:</p>
+
+				<ul>
+					<li>a web server (apache, nginx, etc)</li>
+					<li>MySQL-compatible Database server (optional)</li>
+				</ul>
+
+				<p>If you are using Windows for development we recomend using <a href="http://www.uniformserver.com/">Uniform Server</a>, <a href="http://winginx.com/">Winginx</a> or <a href="http://www.easyphp.org/">EasyPHP</a>, whichever fits your needs best.</p>
+
+			</div>
+			<div class="col-md-9 content-block">
+
+				<h3 id="from-template">Starting From A Template</h3>
+
+				<p>We offer a basic template from which to start and also pull changes. You may use any other template, including creating your own; we are a library, the project files and structure are whatever you want them to be. The template we recomend can be found at <a href="https://github.com/ibidem/mjolnir-template-app">https://github.com/ibidem/mjolnir-template-app</a></p>
+
+				<p><em>Detailed instructions are available at the given link. When using 3rd party templates we recomend using their installation instructions.</em></p>
+
+				<h4>Brief overview of getting the files</h4>
+
+<pre>
+cd /path/to/secure/location/
+git clone https://github.com/ibidem/mjolnir-template-app.git your-project/
+cd your-project/
+git remote rename origin mjolnir
+bin/vendor/install
+</pre>
+
+			</div>
+			<div class="col-md-9 content-block">
+				
+				<h3 id="from-tutorial">Starting From A Tutorial</h3>
+
+				<p>A tutorial is provided with the documentation. The tutorial explains various features and how to setup a project from scratch.</p>
+
+				<p><em>For an online version of the tutorial please refer to the <a href="/the-docs/">docs section</a>.</em></p>
+
+				<p>After following the brief commands illustrated in the "Starting From A Template" section you may generate the documentation by running <code>./order librarian --manual</code>. A pdf and html version will be generated based on the modules you have loaded on your project root. Since it is dependent on your modules the documentation may include information provided by 3rd parties pertaining to your setup.</p>
+
+			</div>
+			<div class="col-md-push-1 col-md-9 content-block content-block-rounded">
+
+				<h3 id="from-scratch">Starting From Scratch</h3>
+
+				<p>If you are confident in your ability and understanding of how a web application works and wish to create your own special brew feel free to include the library and creating the entire application and structure from scratch.</p>
+
+				<p>For compatibility reasons (mainly dependency resolution) we recommend using <a href="http://getcomposer.org/">composer</a> when pulling the library in. The following is the minimal <code>composer.json</code> for pulling in the complete library:</p>
+
+<pre>
+{
+	"minimum-stability": "dev",
+
+	"require": {
+
+		"php" : ">=5.4.10",
+
+		"mjolnir/cfs"        : "dev-liquid/2.x",
+		"mjolnir/base"       : "dev-liquid/2.x",
+		"mjolnir/foundation" : "dev-liquid/2.x",
+		"mjolnir/html"       : "dev-liquid/2.x",
+		"mjolnir/access"     : "dev-liquid/2.x",
+		"mjolnir/cache"      : "dev-liquid/2.x",
+		"mjolnir/database"   : "dev-liquid/2.x",
+		"mjolnir/backend"    : "dev-liquid/2.x",
+		"mjolnir/theme"      : "dev-liquid/2.x",
+		"mjolnir/types"      : "dev-liquid/2.x",
+		"mjolnir/librarian"  : "dev-liquid/2.x",
+		"mjolnir/legacy"     : "dev-liquid/2.x",
+		"mjolnir/profile"    : "dev-liquid/2.x"
+
+	}
+}
+</pre>
+
+			</div>
+		</div>
+	</div>
+</div>

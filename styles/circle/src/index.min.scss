@@ -1,0 +1,11 @@
+// BOOTSTRAP
+@import 'library/twbs-bootstrap';
+
+// FONTAWESOME
+//$FontAwesomePath: "library/fontawesome/font";
+//@import 'library/fontawesome/scss/font-awesome.scss';
+
+// equity
+@import 'assets/**/*';
+@import 'equity/capital/**/*';
+@import 'equity/page';

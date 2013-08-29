@@ -1,0 +1,93 @@
+---
+layout: default
+title: Features &middot; The Mjolnir Library
+slug: philosophy
+urlbase: "../"
+---
+
+<div class="jumbotron">
+	<div class="container">
+		<h1>Features</h1>
+		<p>An overview of how the library helps you be awesome.</p>
+	</div>
+</div>
+
+<div class="content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 content-block">
+				
+				<h2 id="versions">Class &amp; File Loader</h2>
+				
+				<p>Mjolnir comes with a powerful class, configuration and general file loader. The autoloading system is an integral part of the library. The autoloader has many interesting properties and unlike other autoloaders the order in which you tell the autoloader to read your modules matters!</p>
+
+			</div>
+
+			<div class="col-md-push-1 col-md-4 content-block" style="margin-top: 5em;">
+				
+				<h2 id="versions">Access System</h2>
+				
+				<p>The library ships with a simple to use and powerful access module. You can easily setup basic access for a simple application or setup customizable access rights if you need them. Scales both up and down and you can choose to not use a database for it if you dont want to or need to. In addition it's highly programatical so if you can imagine a logical system by which to grant access (eg. people working under the manager that's assigned to the given project) you'll have no trouble at all implementing it with a few lines of code.</p>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-push-1 col-md-7 content-block">
+				<h2 id="versions">Theme System</h2>
+				<p>The library comes out of the box with support for themes! Themes work on an isolated system so the style and general look of a site can be worked on easily before any working code is in place. In addition themes offer various drivers for managing resources (styles, images, scripts) and if it doesn't have it don't worry, we've made it so it's a piece of cake to roll your own, since everyone has a slightly different taste in tools they like to use.</p>
+			</div>
+		</div>
+
+		<div class="row content-block">
+			<div class="col-md-4">
+				<h2 id="versions">Programable Pipile</h2>
+				<p>Everyone has a slightly different opinion on how software should be built. It's only natural, since every application has different requirements that need to be met. That's why we try our best not to force any pattern or assumtions. We offer tools and a foundation on which to use those tools, as well as the means for you to make your own tools easily, to satisfy your favorite patterns or your own flavor of the patterns.</p>
+				<p><em>When using Mjolnir you can build anything you want, with the patterns you want to build it with! No library restrictions or bias</em></p>
+			</div>
+			<div class="col-md-3">
+				<h2 id="versions">Backend System</h2>
+				<p>To maintain your apps you'll need tools. And a lot of those are specific to your app. The backend system offers those tools. It's an open system (so modules can just plug-in tools) and it's been designed to creating your tools is easy-peasy.</p>
+			</div>
+			<div class="col-md-push-1 col-md-4">
+				<h2 id="versions">CommandLine Support</h2>
+				<p>Oh you need command line tools? We got a ton of those too. Everything from helpers for creating classes, modules and other system components, system status checks, log inspectors (access, queries, cache), finding components (ie. classes, configuration files), running tests, automatically creating tests, etc.</p>
+				<p><em>And of course you can roll your own with minimal effort.</em></p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-push-4 col-md-8 content-block">
+				<h2 id="versions">Paradox Migration System</h2>
+				<p><em>Keeping up with database changes is a pain in the ass... Keeping up with database changes warranted by modules from other people is an even bigger pain in the ass (especially when your own wonders depend on them)... And of course then there's syncing with team members, fixing bad migrations, and so on.</em></p>
+				<p>The paradox system is a migration system that's specifically designed to deal with all of it. It doesn't manage migrations in the sense of <code>1.0 -> 1.2 -> 1.3</code> since that just doesn't work when we're dealing with migrations from independent parties or don't want to halt half the team to wait on the database guy to do his thing. Instead it just ensures migrations are run in an order that makes sense. Different machines may have different histories, different orders in which migrations were run (some may even be missing migrations along the way) but the system will always produce a working database. No data loss. No hardships. If your codebase is good, your migrations are good.</p>
+				<p><small>Oh and it's customizable. Need custom steps? no problem!</small></p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-7 content-block">
+				<h2 id="versions">Interfaces, Types &amp; Traits</h2>
+				<p>All contracts inside the library are done though interfaces and interfaces have been made to be as minimal as possible. If a method could go by with just a basic interface instead of some god object interface we chose the minimal interface so you can fulfil method contracts with ease.</p>
+				<p>In addition all interfaces have types and all the boring boiler place has been delegated to types. This means: you don't have to implement it! (since it's tested in the types module) you don't have to tests it! you don't have to waste time shifting though it when reading classes! you can easily just outright add interfaces to a class with minimal effort since some traits fully implement the interface as-is! you can easily read classes since what would be a 40 method monster, might just now have one or two, the ones that actually matter!</p>
+				<p><em>Last but not least, since types are minimalistic, classes share a lot of types and by consequence if you ever want shortcut methods for methods of those types all you need to do is overwrite the type, inherit and change or add what you want.</em></p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-push-2 col-md-4 content-block">
+				<h2 id="versions">Site Tools</h2>
+				<p>Building good ol' fashion site? We got object based form managing tools, header managing tools, simple and effective module system you can use (of course you can roll your own), and a whole bunch of miscelanious goodies you might find a use for.</p>
+			</div>
+			<div class="col-md-push-3 col-md-4 content-block">
+				<h2 id="versions">Webapp Tools</h2>
+				<p>Building a fully javascript powered application? We come with a model system that takes minimal work and mimicks the way client side frameworks such as bootstrap are structured. Everything else in the system is also built to adapt to different patterns and requirements, and supporting client side applications is no exception. There are also a lot of little goodies to help you build nice APIs scattered around the library.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-push-1 col-md-9 content-block content-block-rounded"><em>There are many other features, from transparent no-knowledge class extention support to our naming, versioning and backwards compatibility legacy system that is designed to keep upgrades lean, mean and require zero work (and we do mean NO backwards compatibility fixing when we say that). But that's a story for another time, somewhere in the docs...</em></p>
+		</div>
+
+	</div>
+</div>

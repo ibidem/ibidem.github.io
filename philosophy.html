@@ -1,0 +1,44 @@
+---
+layout: default
+title: Philosophy &middot; The Mjolnir Library
+slug: philosophy
+urlbase: "../"
+---
+
+<div class="jumbotron">
+	<div class="container">
+		<h1>Philosophy</h1>
+		<p>Explanations on potentially confusing behaviour</p>
+	</div>
+</div>
+
+<div class="content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 content-block">
+
+				<h2 id="Versioning">Versioning</h2>
+
+				<p>We recognize a version as <i>stable</i> when it has complete tests and complete docs and obviously no bugs. We also recognize a version as <i>solid</i> when it has been stable for a very long time, ie. we don't feel we really need or can add anything more to it outside a rewrite or language port. If it's not stable it's a <i>liquid</i> version which doesn't mean it's alpha, or has problems, just that it doesn't have the full set of tests and docs.</p>
+
+				<p>As for version numbers, ie. the <code>X.Y.Z</code> notation. We consider <code>X</code> to indicate "you'll need to do work to jump over from a previous version," <code>Y</code> to indicate "you can do work to jump over, but we also have legacy support in the form of a legacy module that will add the backwards compatibility in so you don't have to do the work," and last but not least, <code>Z</code> is for changes that don't involve backwards compatiblity problems. It may seem like <code>X</code> is some kind of rewrite or "major release" version, but really it can and has changed on the most boring features; new major features are actually far more likely to bump the <code>Y</code> version unless we consider them an alternative to a existing feature in which we will bump <code>Y</code> version to indicate the old system is being deprecated (typically we will have the old system move to legacy support in such cases). In short, the numbers are entirely based on how much we can help you make the transition between versions. We know many projects use their version numbers (in particular the major version number) to comunicate "the latest and greatest" but we don't, our versioning is purely a backwards compatibility indicator which we find to be more useful for projects thinking of upgrading (and if you're starting out you're just getting the latest anyway). We feel that if you need a feature you'll know about it and get the version that has it, with out us having to ring any bells and whistels to get your attention.</p>
+
+				<p>It's worth mentioning that we also don't have a set release schedules. We try to push as often as possible; this is partly why we try hard to have very well defined versions.</p>
+
+				<p>Releases are available as <code>type/X.Y.Z</code> branches on the official repositories. We don't keep seperate versions, all modules share a common "library version" to avoid versioning headaches and because we consider all modules to form a cohesive entity, even if we provide the option of removing/replacing them as need be. Unless special circumstances call for it, for development reasons the <code>Y</code> and <code>Z</code> are generally ommited in the branch name that are not `stable` and denoted by a <code>.x</code>, ie. <code>liquid/2.x</code>. Branches that are either <code>stable</code> or <code>solid</code> will have tags assigned, all other branch will not.</p>
+
+			</div>
+			<div class="col-md-9 content-block">
+
+				<h2 id="Naming">Naming</h2>
+
+				<p>In the Mjolnir Library we use naming to both distinguish between different features as well as distinguish between different implementations of the same feature.</p>
+
+				<p>Other projects will generally maintain the same name across rewrites or breaking changes for the purpose of keeping the familiarity of their users with the feature, but since we heavily push for easy backwards compatiblity across our code we heavily favor changing the name when we implement a new iteration or rewrite of a existing feature under if we see direct backwards compatibility with the old system to be either impossible or cause limitations in the implementation of the new system. By implementing a feature under a different name old projects may continue using the old system while new projects can adopt the new improved system.</p>
+
+				<p>Since keeping the old name doesn't avoid the need to reference the docs for how the new system works we consider keeping the old name a very low priority.</p>
+
+			</div>
+		</div>
+	</div>
+</div>

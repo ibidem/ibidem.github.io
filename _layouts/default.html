@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>{{ page.title }}</title>
+		<meta rel="description" content="Comprehensive, modular, overwritable library for long lasting projects."/>
+		
+		<!-- webfonts -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,400italic' rel='stylesheet' type='text/css'>
+
+		<!-- style -->
+		<link rel="stylesheet" href="{{ page.urlbase }}styles/circle/root/index.min.css"/>
+
+		<!-- jquery -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			{% include nav.html %}
+			{{ content }}
+		</div>
+
+		<div id="footer">
+			<div class="container">
+				<p class="text-muted credit">
+					<i>Want to talk or found a bug? Come poke us at <a href="https://github.com/ibidem">github</a>.</i>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
